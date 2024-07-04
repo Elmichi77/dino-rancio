@@ -15,17 +15,11 @@ function Piedrita () {
         }
     }
 }
-input.onGesture(Gesture.Shake, function () {
-    game.resume()
-})
-input.onButtonPressed(Button.B, function () {
-    game.pause()
-})
 let Piedra: game.LedSprite = null
-let Cabesaurio: game.LedSprite = null
 let Patasaurio: game.LedSprite = null
-Patasaurio = game.createSprite(0, 4)
+let Cabesaurio: game.LedSprite = null
 Cabesaurio = game.createSprite(0, 3)
+Patasaurio = game.createSprite(0, 4)
 Piedrita()
 basic.forever(function () {
     if (Piedra.isTouchingEdge()) {
